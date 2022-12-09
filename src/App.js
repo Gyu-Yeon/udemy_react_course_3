@@ -1,13 +1,16 @@
 import searchImages from "./api";
+import { useState } from "react";
+import SearchBar from "./components/SearchBar";
 
 function App() {
-  const handleClick = () => {
-    searchImages();
+  const handleClick = (term) => {
+    searchImages(term);
   };
+
   return (
     <div className="App">
       <h1>App</h1>
-      <button onClick={handleClick}>Click</button>
+      <SearchBar handleClick={handleClick} />
     </div>
   );
 }
