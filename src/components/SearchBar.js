@@ -5,7 +5,7 @@ function SearchBar(props) {
   const [term, setTerm] = useState("");
 
   const handleChange = (e) => {
-    setTerm(e.target.value);
+    setTerm(e.target.value.replace(/[A-Z]/, ""));
   };
   return (
     <div className="SearchBar">
